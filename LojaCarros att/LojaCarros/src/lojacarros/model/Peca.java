@@ -67,4 +67,5 @@ public class Peca{
     public void setQtdEstoque(int qtdEstoque) {
         this.qtdEstoque = qtdEstoque;
     }
+    
 }

@@ -10,17 +10,18 @@ public class Servico// extends Veiculo
     private String pecasUtilizadas;
     private Date data;
     private float custos;
+    private Veiculo veiculo;
 
     // Construtor
-    public Servico(String marca, String modelo, int ano, String cor, String tipoServico, String proprietario,
-                          String material, String pecasUtilizadas, Date data, float custos) {
-        //super(marca, modelo, ano, cor);
+    public Servico(String tipoServico, String proprietario,String material, String pecasUtilizadas, Date data, float custos) {
+        
         this.tipoServico = tipoServico;
         this.proprietario = proprietario;
         this.material = material;
         this.pecasUtilizadas = pecasUtilizadas;
         this.data = data;
         this.custos = custos;
+        this.veiculo=veiculo;
     }
 
     // Métodos getters e setters
@@ -71,4 +72,12 @@ public class Servico// extends Veiculo
     public void setCustos(float custos) {
         this.custos = custos;
     }
+    public Veiculo getVeiculo() {
+        return veiculo;
+    }
+
+    public void setVeiculo(Veiculo veiculo) {
+        this.veiculo = veiculo;
+    }
+    
 }
