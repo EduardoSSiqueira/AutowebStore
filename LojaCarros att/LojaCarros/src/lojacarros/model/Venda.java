@@ -12,12 +12,15 @@ package lojacarros.model;
 public class Venda {
    
     private Cliente clienteVenda;
-    private Veículo veiculoVenda;
+    private Veiculo veiculoVenda;
     private Funcionario funcVenda;
     private String dataVenda;
     
-    public Venda(){
-        
+    private Venda(Cliente clienteVenda, Veiculo veiculoVenda, Funcionario funcVenda, String dataVenda) {
+        this.clienteVenda = clienteVenda;
+        this.veiculoVenda = veiculoVenda;
+        this.funcVenda = funcVenda;
+        this.dataVenda = dataVenda;
     }
 
     public Cliente getClienteVenda() {
@@ -28,11 +31,11 @@ public class Venda {
         this.clienteVenda = clienteVenda;
     }
 
-    public Veículo getVeiculoVenda() {
+    public Veiculo getVeiculoVenda() {
         return veiculoVenda;
     }
 
-    public void setVeiculoVenda(Veículo veiculoVenda) {
+    public void setVeiculoVenda(Veiculo veiculoVenda) {
         this.veiculoVenda = veiculoVenda;
     }
 

@@ -19,9 +19,12 @@ public class Cliente {
     private LocalDate datadenascimento;
 
     
-    public Cliente(){
+ private Cliente(String nome, String cpf, String cidade, LocalDate datadenascimento) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.cidade = cidade;
+        this.datadenascimento = datadenascimento;
     }
-
     /**
      * @return the nome
      */

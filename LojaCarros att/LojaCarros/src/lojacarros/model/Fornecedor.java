@@ -20,8 +20,13 @@ public class Fornecedor {
     private String empresa;
     private int cnpj;
 
-    public Fornecedor(){
+    private Fornecedor(String local, String carros, String empresa, int cnpj) {
+        this.local = local;
+        this.carros = carros;
+        this.empresa = empresa;
+        this.cnpj = cnpj;
     }
+
 
     /**
      * @return the local

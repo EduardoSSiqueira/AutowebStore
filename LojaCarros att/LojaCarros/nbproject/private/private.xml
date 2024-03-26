@@ -3,10 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/20201si029/Documents/LojaCarros/src/lojacarros/model/Fornecedor.java</file>
-            <file>file:/C:/Users/20201si029/Documents/LojaCarros/src/lojacarros/Main.java</file>
-            <file>file:/C:/Users/20201si029/Documents/LojaCarros/src/lojacarros/model/TestDrive.java</file>
-            <file>file:/C:/Users/20201si029/Documents/LojaCarros/src/lojacarros/model/Cliente.java</file>
+            <file>file:/C:/Users/Felipe/Desktop/LojaCarros/src/lojacarros/model/TestDrive.java</file>
+            <file>file:/C:/Users/Felipe/Desktop/LojaCarros/src/lojacarros/model/Consorcio.java</file>
+            <file>file:/C:/Users/Felipe/Desktop/LojaCarros/src/lojacarros/model/Veiculo.java</file>
+            <file>file:/C:/Users/Felipe/Desktop/LojaCarros/src/lojacarros/model/Cliente.java</file>
+            <file>file:/C:/Users/Felipe/Desktop/LojaCarros/src/lojacarros/model/Peca.java</file>
+            <file>file:/C:/Users/Felipe/Desktop/LojaCarros/src/lojacarros/model/Venda.java</file>
+            <file>file:/C:/Users/Felipe/Desktop/LojaCarros/src/lojacarros/model/Fornecedor.java</file>
         </group>
     </open-files>
 </project-private>

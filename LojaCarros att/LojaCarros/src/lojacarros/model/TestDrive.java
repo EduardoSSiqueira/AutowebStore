@@ -19,7 +19,11 @@ public class TestDrive {
     private String nacionalidade;
 
     
-    public TestDrive(){
+    private TestDrive(String cliente, String veiculo, LocalDate data, String nacionalidade) {
+        this.cliente = cliente;
+        this.veiculo = veiculo;
+        this.data = data;
+        this.nacionalidade = nacionalidade;
     }
 
     /**
