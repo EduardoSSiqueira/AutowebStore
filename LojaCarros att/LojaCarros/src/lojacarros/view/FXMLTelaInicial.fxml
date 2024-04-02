@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lojacarros.controller.FXMLTelaInicialController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Cadastros">
+            <items>
+              <MenuItem fx:id="menuItemCadastroVeiculos" mnemonicParsing="false" onAction="#handleMenuItemCadastroVeiculos" text="Veiculos" />
+                  <MenuItem fx:id="menuItemCadastroFuncionarios" mnemonicParsing="false" onAction="#handleMenuItemCadastroFuncionarios" text="Funcionários" />
+                  <MenuItem fx:id="menuItemCadastroCliente" mnemonicParsing="false" onAction="#handleMenuItemCadastroCliente" text="Cliente" />
+                  <MenuItem fx:id="menuItemCadastroFornecedor" mnemonicParsing="false" onAction="#handleMenuItemCadastroFornecedor" text="Fornecedor" />
+                  <MenuItem fx:id="menuItemCadastroPecaRepo" mnemonicParsing="false" onAction="#handleMenuItemCadastroPecaRepo" text="Peças de Reposição" />
+                  <MenuItem fx:id="menuItemCadastroManutencao" mnemonicParsing="false" onAction="#handleMenuItemCadastroManutencao" text="Manutenção" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Processos">
+            <items>
+              <MenuItem fx:id="menuItemProcessoVenda" mnemonicParsing="false" onAction="#handleMenuItemProcessoVenda" text="Venda" />
+                  <MenuItem fx:id="menuItemProcessoTestDrive" mnemonicParsing="false" onAction="#handleMenuItemProcessoTestDrive" text="Test Drive" />
+                  <MenuItem fx:id="menuItemProcessoConsorcio" mnemonicParsing="false" onAction="#handleMenuItemProcessoConsorcio" text="Consórcio" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Relatório">
+              <items>
+                <MenuItem fx:id="menuItemRelatorioTestDrive" mnemonicParsing="false" onAction="#handleMenuItemRelatorioTestDrive" text="Agendamento Test Drive" />
+                  <MenuItem fx:id="menuItemRelatorioVenda" mnemonicParsing="false" onAction="#handleMenuItemRelatorioVenda" text="Venda" />
+                  <MenuItem fx:id="menuItemRelatorioConsorcio" mnemonicParsing="false" onAction="#handleMenuItemRelatorioConsorcio" text="Consórcio" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane fx:id="anchorPane" prefHeight="582.0" prefWidth="1000.0">
+         <children>
+            <Pane prefHeight="165.0" prefWidth="1001.0" style="-fx-background-color: #39464c;" />
+            <Pane layoutX="-1.0" layoutY="164.0" prefHeight="412.0" prefWidth="1001.0" style="-fx-background-color: #a0a6a8;" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

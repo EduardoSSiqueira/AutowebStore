@@ -5,9 +5,6 @@
  */
 package lojacarros.controller;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.fxml.Initializable;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,22 +13,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
-import lojacarros.controller.FXMLTelaLoginController;
 import javafx.stage.Stage;
-import lojacarros.Main;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import javafx.scene.Parent;
-import javafx.scene.control.Alert;
 
 
 
@@ -62,13 +48,26 @@ public class FXMLTelaLoginController implements Initializable {
     
     
     @FXML
-    void handleCadastroLogin(ActionEvent event) {
-
+    void handleCadastroLogin(ActionEvent event) throws IOException {
     } 
     
     
     @FXML
-    void handleLogin(ActionEvent event) {
+    void handleLogin(ActionEvent event) throws IOException {
+        showFXMLTelaInicial();
+        buttonLogin.getScene().getWindow().hide();
+
+
+    }
+    
+    private void showFXMLTelaInicial() throws IOException{
+        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/lojacarros/view/FXMLTelaInicial.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        Stage stageTelaInicial = new Stage();     
+        stageTelaInicial.setScene(scene);
+        stageTelaInicial.show();
 
     }
     

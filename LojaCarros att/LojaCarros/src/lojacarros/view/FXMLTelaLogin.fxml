@@ -13,9 +13,9 @@
    <children>
       <Pane prefHeight="743.0" prefWidth="512.0" style="-fx-background-color: #212121;">
          <children>
-            <ImageView fitHeight="761.0" fitWidth="560.0" layoutX="-18.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="751.0" fitWidth="543.0" layoutX="-18.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/Mercedes.jpg" />
+                  <Image url="@../img/valence%20(1).png" />
                </image>
             </ImageView>
          </children></Pane>
