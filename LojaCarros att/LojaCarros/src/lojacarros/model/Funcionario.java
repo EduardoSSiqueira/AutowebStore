@@ -22,6 +22,15 @@ public class Funcionario {
         
     }
 
+    public Funcionario(int codFunc, int nome, String dataNasc, int cpf, int usuario, int senha) {
+        this.codFunc = codFunc;
+        this.nome = nome;
+        this.dataNasc = dataNasc;
+        this.cpf = cpf;
+        this.usuario = usuario;
+        this.senha = senha;
+    }
+
     public int getCodFunc() {
         return codFunc;
     }

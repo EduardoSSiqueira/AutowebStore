@@ -1,11 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="lojacarros.controller.FXMLCadastroManutencaoController">
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="679.0" prefWidth="999.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lojacarros.controller.FXMLCadastroVeiculosController">
    <children>
-      <Label layoutX="246.0" layoutY="142.0" text="Cadastro Manutecao" />
+      <SplitPane dividerPositions="0.5" layoutY="79.0" prefHeight="600.0" prefWidth="1000.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="232.0" prefWidth="176.0">
+               <children>
+                  <TableView fx:id="tableViewCadastroManutencao" layoutX="36.0" layoutY="40.0" prefHeight="598.0" prefWidth="495.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columns>
+                        <TableColumn fx:id="tableColumnCadastroManutencaoVeiculo" prefWidth="248.0" text="Veículo" />
+                        <TableColumn fx:id="tableColumnCadastroManutencaoTipoServico" minWidth="3.0" prefWidth="246.0" text="Serviço" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="556.0">
+               <children>
+                  <GridPane layoutX="70.0" layoutY="162.0" prefHeight="274.0" prefWidth="355.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Tipo de Serviço">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Veículo" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Proprietário" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelTipoServico" GridPane.columnIndex="1" />
+                        <Label fx:id="labelVeiculo" prefHeight="21.0" prefWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="labelProprietarioVeiculo" prefHeight="21.0" prefWidth="17.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Material Utilizado" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Peças Utilizadas" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Data" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Custos" GridPane.rowIndex="6">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelMaterialUtilizado" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="labelPecasUtilizadas" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label fx:id="labelData" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label fx:id="labelCustos" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                     </children>
+                  </GridPane>
+                  <Label layoutX="195.0" layoutY="41.0" text="Detalhes">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="buttonAlterar" layoutX="315.0" layoutY="503.0" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: cbb26a;" text="Alterar" />
+                  <JFXButton fx:id="buttonInserir" layoutX="224.0" layoutY="503.0" onAction="#handleCadastrosManutencaoInserir" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: cbb26a;" text="Inserir" />
+                  <JFXButton fx:id="buttonRemover" layoutX="402.0" layoutY="503.0" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: cbb26a;" text="Remover" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <Label layoutX="334.0" layoutY="14.0" text="Cadastro Manutenção">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

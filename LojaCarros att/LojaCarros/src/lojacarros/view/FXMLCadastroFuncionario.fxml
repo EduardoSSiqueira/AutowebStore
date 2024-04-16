@@ -1,11 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="lojacarros.controller.FXMLCadastroFuncionarioController">
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="660.0" prefWidth="985.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lojacarros.controller.FXMLCadastroFuncionarioController">
    <children>
-      <Label layoutX="237.0" layoutY="192.0" text="Cadastro Funcionario" />
+      <AnchorPane id="AnchorPane" layoutY="9.0" prefHeight="689.0" prefWidth="1010.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <SplitPane dividerPositions="0.5" layoutY="79.0" prefHeight="600.0" prefWidth="1000.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="232.0" prefWidth="176.0">
+                     <children>
+                        <TableView fx:id="tableViewCadastroVeiculos" layoutX="36.0" layoutY="40.0" prefHeight="598.0" prefWidth="495.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="tableColumnCadastroFuncionarioNome" prefWidth="248.0" text="Nome" />
+                              <TableColumn fx:id="tableColumnCadastroFuncionarioCPF" minWidth="3.0" prefWidth="246.0" text="CPF" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="556.0">
+                     <children>
+                        <GridPane layoutX="70.0" layoutY="180.0" prefHeight="274.0" prefWidth="355.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Nome">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Data de Nascimento" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="CPF" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelNomeFuncionario" GridPane.columnIndex="1" />
+                              <Label fx:id="labelDataNascFuncionario" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="labelCPFFuncionario" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label text="Usuário" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="tableColumnCadastroFuncionarioUsuario" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <Label layoutX="195.0" layoutY="41.0" text="Detalhes">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="buttonAlterar" layoutX="315.0" layoutY="503.0" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: cbb26a;" text="Alterar" />
+                        <JFXButton fx:id="buttonInserir" layoutX="224.0" layoutY="503.0" onAction="#handleCadastrosFuncionarioInserir" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: cbb26a;" text="Inserir" />
+                        <JFXButton fx:id="buttonRemover" layoutX="402.0" layoutY="503.0" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: cbb26a;" text="Remover" />
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+            <Label layoutX="334.0" layoutY="14.0" text="Cadastro de Funcionários">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

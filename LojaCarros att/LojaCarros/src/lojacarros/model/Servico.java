@@ -23,6 +23,9 @@ public class Servico// extends Veiculo
         this.custos = custos;
         this.veiculo=veiculo;
     }
+    public Servico(){
+    
+    }
 
     // Métodos getters e setters
     public String getTipoServico() {

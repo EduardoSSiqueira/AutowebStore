@@ -15,11 +15,16 @@ public class Veiculo {
     private int ano;
     private double preco;
     
-    private Veiculo(String modelo, int ano, double preco) {
+    public Veiculo(){
+    }
+
+    public Veiculo(String modelo, int ano, double preco) {
         this.modelo = modelo;
         this.ano = ano;
         this.preco = preco;
     }
+    
+    
      public String getModelo() {
         return modelo;
     }
