@@ -3,6 +3,8 @@ package lojacarros.model;
 
 
 public class Peca{
+    
+    private int codPeca;
     private String nomePeca;
     private String descPeca;
     private String numPeca;
@@ -11,7 +13,8 @@ public class Peca{
     private int qtdEstoque;
 
 
-    public Peca(String nomePeca, String descPeca, String numPeca, String fabricante, float preco, int qtdEstoque) {
+    public Peca(int codPeca,String nomePeca, String descPeca, String numPeca, String fabricante, float preco, int qtdEstoque) {
+        this.codPeca = codPeca;
         this.nomePeca = nomePeca;
         this.descPeca = descPeca;
         this.numPeca = numPeca;
@@ -19,6 +22,19 @@ public class Peca{
         this.preco = preco;
         this.qtdEstoque = qtdEstoque;
     }
+    
+    
+    
+     public Peca() {
+     
+    }
+        public int getcodPeca() {
+        return codPeca;
+    }
+
+    public void setcodPeca(int codPeca) {
+        this.codPeca = codPeca;
+    } 
 
     public String getNomePeca() {
         return nomePeca;
@@ -67,5 +83,4 @@ public class Peca{
     public void setQtdEstoque(int qtdEstoque) {
         this.qtdEstoque = qtdEstoque;
     }
-    
 }

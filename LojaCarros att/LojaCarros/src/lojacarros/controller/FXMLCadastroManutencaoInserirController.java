@@ -72,8 +72,12 @@ public class FXMLCadastroManutencaoInserirController implements Initializable {
         return this.servico;
     }
     
-    void setVeiculo(Servico servico) {
+    void setServico(Servico servico) {
+        
     }
+    
+    
+    
 
     public boolean isButtonConfirmarClicked() {
         return buttonConfirmarClicked;

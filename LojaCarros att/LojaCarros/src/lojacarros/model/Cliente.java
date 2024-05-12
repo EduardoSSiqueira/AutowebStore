@@ -13,21 +13,33 @@ import java.time.LocalDate;
  */
 public class Cliente {
     
+    private int cdCliente;
     private String nome;
     private String cpf;    
     private String cidade;
     private LocalDate datadenascimento;
 
+    public Cliente() {
+    }
     
- private Cliente(String nome, String cpf, String cidade, LocalDate datadenascimento) {
+    public Cliente(int cdCliente, String nome, String cpf, String cidade, LocalDate datadenascimento) {
+        this.cdCliente = cdCliente;
         this.nome = nome;
         this.cpf = cpf;
         this.cidade = cidade;
         this.datadenascimento = datadenascimento;
     }
-    /**
-     * @return the nome
-     */
+
+
+
+    public int getCdCliente() {
+        return cdCliente;
+    }
+
+    public void setCdCliente(int cdCliente) {
+        this.cdCliente = cdCliente;
+    }
+ 
     public String getNome() {
         return nome;
     }
@@ -79,6 +91,11 @@ public class Cliente {
      */
     public void setDatadenascimento(LocalDate datadenascimento) {
         this.datadenascimento = datadenascimento;
+    } 
+    
+    @Override
+    public String toString() {
+        return this.nome;
     }
     
 }

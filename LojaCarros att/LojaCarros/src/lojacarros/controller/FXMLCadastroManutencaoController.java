@@ -91,7 +91,7 @@ public class FXMLCadastroManutencaoController implements Initializable {
         dialogStage.setScene(scene);
         FXMLCadastroVeiculoInserirController controller = loader.getController();
         controller.setDialogStage(dialogStage);
-        controller.setServico(servico);
+ //       controller.setServico(servico);
         dialogStage.showAndWait();
         return controller.isButtonConfirmarClicked();
         

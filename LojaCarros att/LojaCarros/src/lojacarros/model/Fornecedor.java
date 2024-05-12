@@ -14,13 +14,17 @@ package lojacarros.model;
 
     
 public class Fornecedor {
-    
+    private int cdFornecedor;
     private String local;
     private String carros;
     private String empresa;
-    private int cnpj;
+    private String cnpj;
+    
+    public Fornecedor() {
+    }
 
-    private Fornecedor(String local, String carros, String empresa, int cnpj) {
+    private Fornecedor(int cdFornecedor, String local, String carros, String empresa, String cnpj) {
+        this.cdFornecedor = cdFornecedor;
         this.local = local;
         this.carros = carros;
         this.empresa = empresa;
@@ -73,15 +77,29 @@ public class Fornecedor {
     /**
      * @return the cnpj
      */
-    public int getCnpj() {
+    public String getCnpj() {
         return cnpj;
     }
 
     /**
      * @param cnpj the cnpj to set
      */
-    public void setCnpj(int cnpj) {
+    public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
+    }
+
+    /**
+     * @return the cdFornecedor
+     */
+    public int getCdFornecedor() {
+        return cdFornecedor;
+    }
+
+    /**
+     * @param cdFornecedor the cdFornecedor to set
+     */
+    public void setCdFornecedor(int cdFornecedor) {
+        this.cdFornecedor = cdFornecedor;
     }
     
 }

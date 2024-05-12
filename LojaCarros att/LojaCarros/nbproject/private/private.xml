@@ -3,12 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Carlos/Documents/LojaCarros/src/lojacarros/controller/FXMLCadastroManutencaoController.java</file>
-            <file>file:/C:/Users/Carlos/Documents/LojaCarros/src/lojacarros/model/Servico.java</file>
-            <file>file:/C:/Users/Carlos/Documents/LojaCarros/src/lojacarros/controller/FXMLCadastroFuncionarioController.java</file>
-            <file>file:/C:/Users/Carlos/Documents/LojaCarros/src/lojacarros/controller/FXMLCadastroVeiculoInserirController.java</file>
-            <file>file:/C:/Users/Carlos/Documents/LojaCarros/src/lojacarros/controller/FXMLCadastroVeiculosController.java</file>
-            <file>file:/C:/Users/Carlos/Documents/LojaCarros/src/lojacarros/controller/FXMLCadastroManutencaoInserirController.java</file>
+            <file>file:/C:/Users/20201si029/Documents/LojaCarros/src/lojacarros/controller/FXMLCadastroFornecedorInserirController.java</file>
+            <file>file:/C:/Users/20201si029/Documents/LojaCarros/src/lojacarros/controller/FXMLCadastroFuncionarioInserirController.java</file>
+            <file>file:/C:/Users/20201si029/Documents/LojaCarros/src/lojacarros/controller/FXMLCadastroClienteController.java</file>
+            <file>file:/C:/Users/20201si029/Documents/LojaCarros/src/lojacarros/controller/FXMLCadastroVeiculoInserirController.java</file>
+            <file>file:/C:/Users/20201si029/Documents/LojaCarros/src/lojacarros/controller/FXMLCadastroManutencaoController.java</file>
+            <file>file:/C:/Users/20201si029/Documents/LojaCarros/src/lojacarros/model/Veiculo.java</file>
+            <file>file:/C:/Users/20201si029/Documents/LojaCarros/src/lojacarros/controller/FXMLCadastroManutencaoInserirController.java</file>
+            <file>file:/C:/Users/20201si029/Documents/LojaCarros/src/lojacarros/controller/FXMLCadastroClienteInserirController.java</file>
+            <file>file:/C:/Users/20201si029/Documents/LojaCarros/src/lojacarros/controller/FXMLCadastroVeiculosController.java</file>
+            <file>file:/C:/Users/20201si029/Documents/LojaCarros/src/lojacarros/model/dao/VeiculoDAO.java</file>
         </group>
     </open-files>
 </project-private>

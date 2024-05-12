@@ -5,6 +5,8 @@
  */
 package lojacarros.model;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author Carlos
@@ -12,23 +14,19 @@ package lojacarros.model;
 public class Funcionario {
     
     private int codFunc;
-    private int nome;
-    private String dataNasc;
-    private int cpf;
-    private int usuario;
-    private int senha;
+    private String nome;
+    private LocalDate dataNasc;
+    private String cpf;
     
     public Funcionario(){
         
     }
 
-    public Funcionario(int codFunc, int nome, String dataNasc, int cpf, int usuario, int senha) {
+    public Funcionario(int codFunc, String nome, LocalDate dataNasc, String cpf) {
         this.codFunc = codFunc;
         this.nome = nome;
         this.dataNasc = dataNasc;
         this.cpf = cpf;
-        this.usuario = usuario;
-        this.senha = senha;
     }
 
     public int getCodFunc() {
@@ -39,50 +37,28 @@ public class Funcionario {
         this.codFunc = codFunc;
     }
 
-    public int getNome() {
+    public String getNome() {
         return nome;
     }
 
-    public void setNome(int nome) {
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public String getDataNasc() {
+    public LocalDate getDataNasc() {
         return dataNasc;
     }
 
-    public void setDataNasc(String dataNasc) {
+    public void setDataNasc(LocalDate dataNasc) {
         this.dataNasc = dataNasc;
     }
 
-    public int getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
-
-    public int getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(int usuario) {
-        this.usuario = usuario;
-    }
-
-    public int getSenha() {
-        return senha;
-    }
-
-    public void setSenha(int senha) {
-        this.senha = senha;
-    }
-
-   
     
-    
-    
-    
-     
 }

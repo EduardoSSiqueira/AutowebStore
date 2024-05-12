@@ -11,16 +11,38 @@ package lojacarros.model;
  */
 public class Veiculo {
     
+    private int cdVeiculo;
     private String modelo;
-    private int ano;
-    private double preco;
+    private String ano;
+    private String preco;
     
     public Veiculo(){
     }
 
-    public Veiculo(String modelo, int ano, double preco) {
+    public Veiculo(int cdVeiculo, String modelo, String ano, String preco) {
+        this.cdVeiculo = cdVeiculo;
         this.modelo = modelo;
         this.ano = ano;
+        this.preco = preco;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public int getCdVeiculo() {
+        return cdVeiculo;
+    }
+
+    public void setCdVeiculo(int cdVeiculo) {
+        this.cdVeiculo = cdVeiculo;
+    }
+
+    public String getPreco() {
+        return preco;
+    }
+
+    public void setPreco(String preco) {
         this.preco = preco;
     }
     
@@ -35,24 +57,20 @@ public class Veiculo {
     }
 
     
-    public int getAno() {
+    public String getAno() {
         return ano;
     }
 
    
-    public void setAno(int ano) {
+    public void setAno(String ano) {
         this.ano = ano;
     }
 
   
-    public Double getPreço() {
+    public String getPreço() {
         return preco;
     }
 
- 
-    public void setEmpresa(Double preco) {
-        this.preco = preco;
-    }
 
     
     

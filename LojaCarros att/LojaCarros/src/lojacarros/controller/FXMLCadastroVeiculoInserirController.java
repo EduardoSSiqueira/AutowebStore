@@ -11,6 +11,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import lojacarros.model.Servico;
 import lojacarros.model.Veiculo;
@@ -42,6 +43,7 @@ public class FXMLCadastroVeiculoInserirController implements Initializable {
 
     @FXML
     private JFXTextField textFieldPreçoCadastroVeiculo;
+    
 
     @FXML
     private JFXButton buttonConfirmar;
@@ -61,16 +63,58 @@ public class FXMLCadastroVeiculoInserirController implements Initializable {
         return this.veiculo;
     }
     
-    void setVeiculo(Veiculo veiculo) {
-
-    }
-
     public boolean isButtonConfirmarClicked() {
         return buttonConfirmarClicked;
     }
 
-    void setServico(Servico servico) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+    
+    void setVeiculo(Veiculo veiculo) {
+        this.veiculo = veiculo;
+        this.textFieldModeloCadastroVeiculo.setText(veiculo.getModelo());
+        this.textFieldAnoCadastroVeiculo.setText(veiculo.getAno());
+        this.textFieldPreçoCadastroVeiculo.setText(String.valueOf(veiculo.getPreco()));
+    }
+    
+    @FXML
+    public void handleButtonConfirmar() {
+        if (validarEntradaDeDados()) {
+        veiculo.setModelo(textFieldModeloCadastroVeiculo.getText());
+        veiculo.setAno(textFieldAnoCadastroVeiculo.getText());
+        veiculo.setPreco(textFieldPreçoCadastroVeiculo.getText());
+        }
     }
 
+     @FXML
+    public void handleButtonCancelar() {
+        getDialogStage().close();
+    } 
+    private boolean validarEntradaDeDados() {
+        String errorMessage = "";
+
+        if (textFieldModeloCadastroVeiculo.getText() == null || textFieldModeloCadastroVeiculo.getText().length() == 0) {
+            errorMessage += "Modelo inválido!\n";
+        }
+        if (textFieldAnoCadastroVeiculo.getText() == null || textFieldAnoCadastroVeiculo.getText().length() == 0) {
+            errorMessage += "Ano inválido!\n";
+        }
+        if (textFieldPreçoCadastroVeiculo.getText() == null || textFieldPreçoCadastroVeiculo.getText().length() == 0) {
+            errorMessage += "Preço inválido!\n";
+        }
+    
+
+        if (errorMessage.length() == 0) {
+            return true;
+        } else {
+            // Mostrando a mensagem de erro
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erro no cadastro");
+            alert.setHeaderText("Campos inválidos, por favor, corrija...");
+            alert.setContentText(errorMessage);
+            alert.show();
+            return false;
+        }
+    }
+    
+    
 }
