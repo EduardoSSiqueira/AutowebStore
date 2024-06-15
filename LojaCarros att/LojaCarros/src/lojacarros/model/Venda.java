@@ -5,22 +5,47 @@
  */
 package lojacarros.model;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author Carlos
  */
 public class Venda {
    
+    private int codVenda;
     private Cliente clienteVenda;
     private Veiculo veiculoVenda;
     private Funcionario funcVenda;
-    private String dataVenda;
+    private LocalDate dataVenda;
+    private String valorVenda;
     
-    private Venda(Cliente clienteVenda, Veiculo veiculoVenda, Funcionario funcVenda, String dataVenda) {
+    private Venda(int codVenda, Cliente clienteVenda, Veiculo veiculoVenda, Funcionario funcVenda, LocalDate dataVenda, String valorVenda) {
+        this.codVenda = codVenda;
         this.clienteVenda = clienteVenda;
         this.veiculoVenda = veiculoVenda;
         this.funcVenda = funcVenda;
         this.dataVenda = dataVenda;
+        this.valorVenda = valorVenda;
+    }
+
+     public Venda() {
+    }
+    
+    public int getCodVenda() {
+        return codVenda;
+    }
+
+    public void setCodVenda(int codVenda) {
+        this.codVenda = codVenda;
+    }
+
+    public String getValorVenda() {
+        return valorVenda;
+    }
+
+    public void setValorVenda(String valorVenda) {
+        this.valorVenda = valorVenda;
     }
 
     public Cliente getClienteVenda() {
@@ -47,15 +72,19 @@ public class Venda {
         this.funcVenda = funcVenda;
     }
 
-    public String getDataVenda() {
+    public LocalDate getDataVenda() {
         return dataVenda;
     }
 
-    public void setDataVenda(String dataVenda) {
+    public void setDataVenda(LocalDate dataVenda) {
         this.dataVenda = dataVenda;
     }
     
-    
+    @Override
+    public String toString() {
+      return clienteVenda.getNome();
+    }
+
     
 }
 

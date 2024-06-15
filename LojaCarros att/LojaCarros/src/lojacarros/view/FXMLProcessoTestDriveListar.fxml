@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="412.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lojacarros.controller.FXMLProcessoTestDriveListarController">
+   <children>
+      <TableView fx:id="tableViewTestDrive" layoutX="26.0" layoutY="27.0" prefHeight="365.0" prefWidth="967.0">
+         <columns>
+            <TableColumn fx:id="tableColumnCodigo" prefWidth="75.0" text="Codigo" />
+            <TableColumn fx:id="tableColumnCliente" prefWidth="96.0" text="Cliente" />
+            <TableColumn fx:id="tableColumnVeiculo" prefWidth="100.0" text="Veiculo" />
+            <TableColumn fx:id="tableColumnData" prefWidth="106.0" text="Data Test Drive" />
+            <TableColumn fx:id="tableColumnDuracao" prefWidth="73.0" text="Duração" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>

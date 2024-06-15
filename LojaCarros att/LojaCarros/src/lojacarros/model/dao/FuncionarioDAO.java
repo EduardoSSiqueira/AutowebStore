@@ -16,7 +16,6 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import lojacarros.model.Funcionario;
-import lojacarros.model.Veiculo;
 
 /**
  *
@@ -46,7 +45,7 @@ public class FuncionarioDAO {
             stmt.execute();
             return true;
         } catch (SQLException ex) {
-            Logger.getLogger(VeiculoDAO.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FuncionarioDAO.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
     }

@@ -31,27 +31,27 @@
                   <Font size="16.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="textFieldCPFCadastroCliente" focusColor="#a0a6a8" prefHeight="37.0" prefWidth="594.0" promptText="CPF/CNPJ" text="Descrição" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <JFXTextField fx:id="textFieldNumeroPecaCadastroPeca" focusColor="#a0a6a8" prefHeight="37.0" prefWidth="594.0" promptText="N de Peça" text="Número de Peça" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font size="16.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="textFieldFabricanteCadastroPeca" focusColor="#a0a6a8" prefWidth="591.0" promptText="Cidade" text="Fabricante" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <JFXTextField fx:id="textFieldDescricaoCadastroPeca" focusColor="#a0a6a8" prefHeight="37.0" prefWidth="594.0" promptText="Descrição" text="Descrição" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="16.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="textFieldNumeroPecaCadastroPeca" focusColor="#a0a6a8" prefHeight="37.0" prefWidth="594.0" promptText="CPF/CNPJ" text="Número de Peça" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <JFXTextField fx:id="textFieldFabricanteCadastroPeca" focusColor="#a0a6a8" prefWidth="591.0" promptText="Fabricante" text="Fabricante" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="16.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="textFieldPrecoCadastroPeca" focusColor="#a0a6a8" prefWidth="591.0" promptText="Cidade" text="Preço " GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <JFXTextField fx:id="textFieldPrecoCadastroPeca" focusColor="#a0a6a8" prefWidth="591.0" promptText="Preço" text="Preço " GridPane.columnIndex="1" GridPane.rowIndex="4">
                <font>
                   <Font size="16.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="textFieldQtdEstoqueCadastroPeca" focusColor="#a0a6a8" prefWidth="591.0" promptText="Cidade" text="Quantidade em estoque" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <JFXTextField fx:id="textFieldQtdEstoqueCadastroPeca" focusColor="#a0a6a8" prefWidth="591.0" promptText="Quantidade em estoque" text="Quantidade em estoque" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <font>
                   <Font size="16.0" />
                </font>

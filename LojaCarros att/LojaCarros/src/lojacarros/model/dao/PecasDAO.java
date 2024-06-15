@@ -94,7 +94,7 @@ public class PecasDAO {
                 Peca peca = new Peca();
                 peca.setcodPeca(resultado.getInt("codPeca"));
                 peca.setNomePeca(resultado.getString("nomePeca"));
-                peca.setDescPeca(resultado.getString("descPeca"));
+                peca.setDescPeca(resultado.getString("descricaoPeca"));
                 peca.setNumPeca(resultado.getString("numeroPeca"));
                 peca.setFabricante(resultado.getString("fabricantePeca"));
                 peca.setPreco(resultado.getFloat("precoPeca"));

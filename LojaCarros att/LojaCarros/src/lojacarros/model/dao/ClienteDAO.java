@@ -114,10 +114,9 @@ public class ClienteDAO {
             ResultSet resultado = stmt.executeQuery();
             if (resultado.next()) {
                 cliente.setNome(resultado.getString("nome"));
+                cliente.setDatadenascimento(resultado.getDate("datanasc").toLocalDate());
                 cliente.setCpf(resultado.getString("cpf"));
-                cliente.setDatadenascimento(resultado.getDate("datanasc ").toLocalDate());
-    //            Date dataNascimento = resultado.getDate("data_nascimento");
-     //           arbitro.setDataDeNascimento(dataNascimento.toLocalDate());
+  
                 cliente.setCidade(resultado.getString("cidade"));
                 retorno = cliente;
             }

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="412.0" prefWidth="1001.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lojacarros.controller.FXMLProcessoConsorcioInserirController">
+   <children>
+      <Label layoutX="431.0" layoutY="24.0" text="Inserir Consórcio">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <JFXDatePicker fx:id="datePickerPrazoPagamento" defaultColor="#a0a6a8" layoutX="271.0" layoutY="270.0" prefHeight="37.0" prefWidth="407.0" promptText="Prazo de pagamento" />
+      <JFXComboBox fx:id="comboBoxVeiculo" focusColor="#a0a6a8" labelFloat="true" layoutX="277.0" layoutY="103.0" prefHeight="37.0" prefWidth="407.0" promptText="Veiculo" style="-fx-font-size: 16;" />
+      <JFXComboBox fx:id="comboBoxCliente" focusColor="#a0a6a8" labelFloat="true" layoutX="277.0" layoutY="54.0" prefHeight="30.0" prefWidth="407.0" promptText="Cliente" style="-fx-font-size: 16;" />
+      <JFXButton fx:id="buttonConfirmar" layoutX="817.0" layoutY="349.0" onAction="#handleButtonConfirmar" prefHeight="37.0" prefWidth="108.0" style="-fx-background-color: #a0a6a8;" text="Confirmar">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="textFieldValorCartaCredito" layoutX="271.0" layoutY="157.0" promptText="Valor da carta de crédito" />
+      <JFXTextField fx:id="textFieldValorParcelas" layoutX="271.0" layoutY="194.0" promptText="Valor das parcelas" />
+      <JFXTextField fx:id="textFieldTaxasAdministrativas" layoutX="271.0" layoutY="232.0" promptText="Taxas administrativas" />
+   </children>
+</AnchorPane>

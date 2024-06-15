@@ -5,9 +5,29 @@
  */
 package lojacarros.controller;
 
+import com.jfoenix.controls.JFXButton;
 import java.net.URL;
+import java.sql.Connection;
+import java.util.List;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import lojacarros.model.Cliente;
+import lojacarros.model.Consorcio;
+import lojacarros.model.dao.ConsorcioDAO;
+import lojacarros.model.database.Database;
+import lojacarros.model.database.DatabaseFactory;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 /**
  * FXML Controller class
@@ -16,12 +36,51 @@ import javafx.fxml.Initializable;
  */
 public class FXMLRelatorioConsorcioController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+ @FXML
+    private TableView<Consorcio> tableViewTestDrive;
+
+    @FXML
+    private TableColumn<Consorcio, Cliente> tableColumnCliente;  
+
+    //String
+    @FXML
+    private TableColumn<Consorcio, String> tableColumnVeiculo;
+    
+    @FXML
+    private JFXButton  buttonImprimir;
+
+    
+    private List<Consorcio> listTestDrive;
+    private ObservableList<Consorcio> observableListTestDrive;
+    
+    private final Database database = DatabaseFactory.getDatabase("postgresql");
+    private final Connection connection = database.conectar();
+    private final ConsorcioDAO consorcioDAO = new ConsorcioDAO();
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        consorcioDAO.setConnection(connection);
+        carregarTableView();
     }    
+    
+    public void carregarTableView(){
+        tableColumnCliente.setCellValueFactory(new PropertyValueFactory<>("cliente"));
+        tableColumnVeiculo.setCellValueFactory(new PropertyValueFactory<>("veiculo"));
+ 
+        
+        listTestDrive = consorcioDAO.listar();
+        observableListTestDrive = FXCollections.observableArrayList(listTestDrive);
+        tableViewTestDrive.setItems(observableListTestDrive);
+    }
+    
+    
+    public void handleImprimir() throws JRException{
+        
+        URL url = getClass().getResource("/lojacarros/relatorios/Relatorio Consorcio.jasper");
+        JasperReport jasperReport = (JasperReport) JRLoader.loadObject(url);
+
+        JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, null, connection);//null: caso não existam filtros
+        JasperViewer jasperViewer = new JasperViewer(jasperPrint, false);//false: não deixa fechar a aplicação principal
+        jasperViewer.setVisible(true);
+    }
     
 }

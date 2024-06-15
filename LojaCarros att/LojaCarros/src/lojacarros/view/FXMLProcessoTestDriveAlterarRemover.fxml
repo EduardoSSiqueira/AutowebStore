@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="412.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lojacarros.controller.FXMLProcessoTestDriverAlterarRemoverController">
+   <children>
+      <Label layoutX="393.0" layoutY="24.0" prefHeight="30.0" prefWidth="171.0" text="Alterar/Remover">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="comboBoxCliente" focusColor="#a0a6a8" labelFloat="true" layoutX="180.0" layoutY="54.0" prefHeight="43.0" prefWidth="367.0" promptText="Cliente" style="-fx-font-size: 16;" />
+      <JFXComboBox fx:id="comboBoxVeiculo" focusColor="#a0a6a8" labelFloat="true" layoutX="180.0" layoutY="115.0" prefHeight="43.0" prefWidth="367.0" promptText="Veiculo" style="-fx-font-size: 16;" />
+      <JFXTextField fx:id="textFieldDuracao" focusColor="#a0a6a8" layoutX="317.0" layoutY="253.0" prefHeight="43.0" prefWidth="108.0" style="-fx-font-size: 16;" />
+      <JFXButton fx:id="buttonAlterar" layoutX="668.0" layoutY="353.0" onAction="#handleButtonAlterar" prefHeight="37.0" prefWidth="108.0" style="-fx-background-color: #a0a6a8;" text="Alterar">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="buttonRemover" layoutX="854.0" layoutY="353.0" onAction="#handleButtonRemover" prefHeight="37.0" prefWidth="108.0" style="-fx-background-color: #a0a6a8;" text="Remover">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXListView fx:id="listViewTestDrive" layoutX="668.0" layoutY="35.0" prefHeight="279.0" prefWidth="294.0" />
+      <Label layoutX="180.0" layoutY="262.0" prefHeight="25.0" prefWidth="125.0" text="Duração/Em dias:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXDatePicker fx:id="datePickerData" defaultColor="#a0a6a8" layoutX="180.0" layoutY="188.0" prefHeight="37.0" prefWidth="367.0" promptText="Data do cartão" />
+   </children>
+</AnchorPane>

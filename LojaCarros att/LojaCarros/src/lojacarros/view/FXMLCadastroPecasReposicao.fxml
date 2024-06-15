@@ -14,14 +14,13 @@
 
 <AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="679.0" prefWidth="999.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lojacarros.controller.FXMLCadastroPecasReposicaoController">
    <children>
-      <SplitPane dividerPositions="0.5" layoutY="134.0" prefHeight="545.0" prefWidth="1000.0">
+      <SplitPane dividerPositions="0.5" layoutY="111.0" prefHeight="568.0" prefWidth="1000.0">
          <items>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="232.0" prefWidth="176.0">
                <children>
-                  <TableView fx:id="tableViewCadastroPecas" layoutX="36.0" layoutY="40.0" prefHeight="598.0" prefWidth="495.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TableView fx:id="tableViewCadastroPecasManu" layoutX="36.0" layoutY="40.0" prefHeight="598.0" prefWidth="495.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <columns>
-                        <TableColumn fx:id="tableColumnCadastroPecasNome" prefWidth="248.0" text="Nome da Peça" />
-                        <TableColumn fx:id="tableColumnCadastroPecasDescricao" minWidth="3.0" prefWidth="246.0" text="Descrição" />
+                        <TableColumn fx:id="tableColumnCadastroPecasN" prefWidth="495.0" text="Nome de Peça" />
                      </columns>
                   </TableView>
                </children>
@@ -38,6 +37,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
                         <Label text="Nº de Peça">
@@ -46,29 +46,35 @@
                            </font>
                         </Label>
                         <Label fx:id="labelNumeroPeca" prefHeight="21.0" prefWidth="17.0" GridPane.columnIndex="1" />
-                        <Label text="Fabricante" GridPane.rowIndex="1">
+                        <Label text="Fabricante" GridPane.rowIndex="2">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label text="Preço" GridPane.rowIndex="2">
+                        <Label text="Preço" GridPane.rowIndex="3">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label text="Quantidade em estoque" GridPane.rowIndex="3">
+                        <Label text="Quantidade em estoque" GridPane.rowIndex="4">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="labelFabricante" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label fx:id="labelPrecoDePeca" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Label fx:id="labelQtdEstoque" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="labelFabricante" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="labelPrecoDePeca" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="labelQtdEstoque" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="Descrição" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelDescricao" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                      </children>
                   </GridPane>
-                  <JFXButton fx:id="buttonAlterar" layoutX="315.0" layoutY="503.0" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #a0a6a8;" text="Alterar" />
+                  <JFXButton fx:id="buttonAlterar" layoutX="315.0" layoutY="503.0" onAction="#handleButtonAlterar" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #a0a6a8;" text="Alterar" />
                   <JFXButton fx:id="buttonInserir" layoutX="224.0" layoutY="503.0" onAction="#handleCadastrosPecasReposicaoInserir" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #a0a6a8;" text="Inserir" />
-                  <JFXButton fx:id="buttonRemover" layoutX="402.0" layoutY="503.0" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #a0a6a8;" text="Remover" />
+                  <JFXButton fx:id="buttonRemover" layoutX="402.0" layoutY="503.0" onAction="#handleButtonRemover" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #a0a6a8;" text="Remover" />
                   <Label layoutX="236.0" layoutY="59.0" text="Detalhes" textFill="#39464c">
                      <font>
                         <Font name="System Bold Italic" size="20.0" />
@@ -78,9 +84,9 @@
             </AnchorPane>
          </items>
       </SplitPane>
-      <Pane layoutX="-8.0" prefHeight="139.0" prefWidth="1016.0" style="-fx-background-color: #39464c;">
+      <Pane layoutX="-8.0" prefHeight="113.0" prefWidth="1016.0" style="-fx-background-color: #39464c;">
          <children>
-            <Label layoutX="406.0" layoutY="55.0" text="Cadastro de Peças de Reposição" textFill="#d9d9d9">
+            <Label layoutX="406.0" layoutY="45.0" text="Cadastro de Peças de Reposição" textFill="#d9d9d9">
                <font>
                   <Font name="System Bold Italic" size="20.0" />
                </font>

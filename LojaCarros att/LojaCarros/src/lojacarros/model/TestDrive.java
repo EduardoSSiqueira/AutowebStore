@@ -12,45 +12,65 @@ import java.time.LocalDate;
  * @author 20201si029
  */
 public class TestDrive {
-    
-    private String cliente;
-    private String veiculo;
-    private LocalDate data;
-    private String nacionalidade;
 
     
-    private TestDrive(String cliente, String veiculo, LocalDate data, String nacionalidade) {
+    private int cdTestDrive;
+    private Cliente cliente;
+    private Veiculo veiculo;
+    private LocalDate data;
+    private int duracao;
+
+    
+    private TestDrive(int cdTestDrive, Cliente cliente, Veiculo veiculo, LocalDate data, int duracao) {
+        this.cdTestDrive = cdTestDrive;
         this.cliente = cliente;
         this.veiculo = veiculo;
         this.data = data;
-        this.nacionalidade = nacionalidade;
+        this.duracao= duracao;
+    }
+
+    public TestDrive() {
+    }
+
+        /**
+     * @return the cdTestDrive
+     */
+    public int getCdTestDrive() {
+        return cdTestDrive;
     }
 
     /**
+     * @param cdTestDrive the cdTestDrive to set
+     */
+    public void setCdTestDrive(int cdTestDrive) {
+        this.cdTestDrive = cdTestDrive;
+    }
+    
+    /**
      * @return the cliente
      */
-    public String getCliente() {
+    public Cliente getCliente() {
         return cliente;
     }
 
     /**
      * @param cliente the cliente to set
      */
-    public void setCliente(String cliente) {
+    public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
 
     /**
      * @return the veiculo
      */
-    public String getVeiculo() {
+    public Veiculo getVeiculo() {
         return veiculo;
     }
 
     /**
      * @param veiculo the veiculo to set
      */
-    public void setVeiculo(String veiculo) {
+    public void setVeiculo(Veiculo veiculo) {
         this.veiculo = veiculo;
     }
 
@@ -69,17 +89,22 @@ public class TestDrive {
     }
 
     /**
-     * @return the nacionalidade
+     * @return the duracao
      */
-    public String getNacionalidade() {
-        return nacionalidade;
+    public int getDuracao() {
+        return duracao;
     }
 
     /**
-     * @param nacionalidade the nacionalidade to set
+     * @param duracao the duracao to set
      */
-    public void setNacionalidade(String nacionalidade) {
-        this.nacionalidade = nacionalidade;
-    }
+    public void setDuracao(int duracao) {
+        this.duracao = duracao;
+    } 
     
+    @Override
+    public String toString() {
+      return veiculo.getModelo();
+    }
+
 }

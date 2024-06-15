@@ -71,7 +71,11 @@ public class Veiculo {
         return preco;
     }
 
-
+    @Override
+    public String toString() {
+        return this.modelo;
+    }
+    
     
     
   

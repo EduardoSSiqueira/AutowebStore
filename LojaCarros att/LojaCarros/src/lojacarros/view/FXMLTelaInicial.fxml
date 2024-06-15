@@ -3,6 +3,8 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
@@ -39,8 +41,33 @@
       </MenuBar>
       <AnchorPane fx:id="anchorPane" prefHeight="582.0" prefWidth="1000.0">
          <children>
-            <Pane layoutY="23.0" prefHeight="676.0" prefWidth="1001.0" style="-fx-background-color: #39464c;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Pane layoutX="-1.0" layoutY="163.0" prefHeight="513.0" prefWidth="1001.0" style="-fx-background-color: #D9D9D9;" />
+            <Pane layoutY="23.0" prefHeight="676.0" prefWidth="1001.0" style="-fx-background-color: #39464c;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="85.0" fitWidth="159.0" layoutX="122.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Design_sem_nome-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="144.0" fitWidth="528.0" layoutX="260.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Captura%20de%20tela%202024-05-12%20230403.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="85.0" fitWidth="159.0" layoutX="709.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Design_sem_nome-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+            <Pane layoutX="-1.0" layoutY="163.0" prefHeight="513.0" prefWidth="1001.0" style="-fx-background-color: #D9D9D9;">
+               <children>
+                  <ImageView fitHeight="500.0" fitWidth="549.0" layoutX="251.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Black%20and%20White%20Car%20Rental%20Service%20Logo%20(2).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
          </children>
       </AnchorPane>
    </children>

@@ -61,4 +61,9 @@ public class Funcionario {
         this.cpf = cpf;
     }
     
+    
+    @Override
+    public String toString() {
+        return this.nome;
+    }
 }

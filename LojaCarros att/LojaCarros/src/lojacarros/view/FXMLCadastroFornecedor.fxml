@@ -57,7 +57,7 @@
                         </JFXButton>
                      </children>
                   </Group>
-                  <Label layoutX="313.0" layoutY="23.0" text="Cadastro Fornecedor" textFill="#39464c">
+                  <Label layoutX="313.0" layoutY="23.0" text="Detalhes" textFill="#39464c">
                      <font>
                         <Font name="System Bold Italic" size="20.0" />
                      </font>

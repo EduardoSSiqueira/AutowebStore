@@ -82,6 +82,9 @@ public class FXMLCadastroVeiculoInserirController implements Initializable {
         veiculo.setModelo(textFieldModeloCadastroVeiculo.getText());
         veiculo.setAno(textFieldAnoCadastroVeiculo.getText());
         veiculo.setPreco(textFieldPreçoCadastroVeiculo.getText());
+        
+        buttonConfirmarClicked = true;
+        dialogStage.close();
         }
     }
 
@@ -115,6 +118,8 @@ public class FXMLCadastroVeiculoInserirController implements Initializable {
             return false;
         }
     }
-    
+
+
+
     
 }

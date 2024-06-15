@@ -16,19 +16,19 @@
    <children>
       <AnchorPane id="AnchorPane" layoutY="9.0" prefHeight="689.0" prefWidth="1010.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <SplitPane dividerPositions="0.5" layoutY="138.0" prefHeight="541.0" prefWidth="1000.0">
+            <SplitPane dividerPositions="0.501002004008016" layoutY="121.0" prefHeight="558.0" prefWidth="1000.0">
                <items>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="232.0" prefWidth="176.0">
                      <children>
                         <TableView fx:id="tableViewCadastroFuncionarios" layoutX="36.0" layoutY="40.0" prefHeight="539.0" prefWidth="439.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <columns>
-                              <TableColumn fx:id="tableColumnCadastroFuncionarioNome" prefWidth="248.0" text="Nome" />
-                              <TableColumn fx:id="tableColumnCadastroFuncionarioCPF" minWidth="3.0" prefWidth="246.0" text="CPF" />
+                              <TableColumn fx:id="tableColumnCadastroFuncionarioNome" prefWidth="219.0" text="Nome" />
+                              <TableColumn fx:id="tableColumnCadastroFuncionarioCPF" minWidth="3.0" prefWidth="276.0" text="CPF" />
                            </columns>
                         </TableView>
                      </children>
                   </AnchorPane>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="539.0" prefWidth="502.0">
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="556.0" prefWidth="518.0">
                      <children>
                         <GridPane layoutX="70.0" layoutY="180.0" prefHeight="274.0" prefWidth="355.0">
                            <columnConstraints>
@@ -68,9 +68,9 @@
                               <Label fx:id="labelCodigoFuncionario" layoutX="10.0" layoutY="19.0" GridPane.columnIndex="1" />
                            </children>
                         </GridPane>
-                        <JFXButton fx:id="buttonAlterar" layoutX="315.0" layoutY="493.0" onAction="#handleButtonAlterar" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #a0a6a8;" text="Alterar" />
-                        <JFXButton fx:id="buttonInserir" layoutX="224.0" layoutY="493.0" onAction="#handleCadastrosFuncionarioInserir" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #a0a6a8;" text="Inserir" />
-                        <JFXButton fx:id="buttonRemover" layoutX="402.0" layoutY="493.0" onAction="#handleButtonRemover" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #a0a6a8;" text="Remover" />
+                        <JFXButton fx:id="buttonAlterar" layoutX="315.0" layoutY="483.0" onAction="#handleButtonAlterar" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #a0a6a8;" text="Alterar" />
+                        <JFXButton fx:id="buttonInserir" layoutX="224.0" layoutY="483.0" onAction="#handleCadastrosFuncionarioInserir" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #a0a6a8;" text="Inserir" />
+                        <JFXButton fx:id="buttonRemover" layoutX="402.0" layoutY="483.0" onAction="#handleButtonRemover" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #a0a6a8;" text="Remover" />
                         <Label layoutX="222.0" layoutY="52.0" text="Detalhes" textFill="#39464c">
                            <font>
                               <Font name="System Bold Italic" size="20.0" />
@@ -85,9 +85,9 @@
                   <Font size="36.0" />
                </font>
             </Label>
-            <Pane layoutX="-8.0" prefHeight="139.0" prefWidth="1016.0" style="-fx-background-color: #39464c;">
+            <Pane layoutX="-8.0" prefHeight="121.0" prefWidth="1016.0" style="-fx-background-color: #39464c;">
                <children>
-                  <Label layoutX="406.0" layoutY="55.0" text="Cadastro de Funcionarios" textFill="#d9d9d9">
+                  <Label layoutX="406.0" layoutY="45.0" text="Cadastro de Funcionarios" textFill="#d9d9d9">
                      <font>
                         <Font name="System Bold Italic" size="20.0" />
                      </font>

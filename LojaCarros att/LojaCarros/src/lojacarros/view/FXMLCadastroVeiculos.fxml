@@ -14,7 +14,7 @@
 
 <AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="679.0" prefWidth="999.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lojacarros.controller.FXMLCadastroVeiculosController">
    <children>
-      <SplitPane dividerPositions="0.5" layoutY="124.0" prefHeight="555.0" prefWidth="1000.0">
+      <SplitPane dividerPositions="0.5" layoutY="112.0" prefHeight="567.0" prefWidth="1000.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="232.0" prefWidth="176.0">
                <children>
@@ -26,7 +26,7 @@
                   </TableView>
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="556.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="565.0" prefWidth="495.0">
                <children>
                   <GridPane layoutX="70.0" layoutY="180.0" prefHeight="274.0" prefWidth="355.0">
                     <columnConstraints>
@@ -70,9 +70,9 @@
                         </Label>
                      </children>
                   </GridPane>
-                  <JFXButton fx:id="buttonAlterar" layoutX="315.0" layoutY="503.0" onAction="#handleButtonAlterar" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #a0a6a8;" text="Alterar" />
-                  <JFXButton fx:id="buttonInserir" layoutX="224.0" layoutY="503.0" onAction="#handleCadastrosVeiculoInserir" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #a0a6a8;" text="Inserir" />
-                  <JFXButton fx:id="buttonRemover" layoutX="402.0" layoutY="503.0" onAction="#handleButtonRemover" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #a0a6a8;" text="Remover" />
+                  <JFXButton fx:id="buttonAlterar" layoutX="315.0" layoutY="493.0" onAction="#handleButtonAlterar" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #a0a6a8;" text="Alterar" />
+                  <JFXButton fx:id="buttonInserir" layoutX="224.0" layoutY="493.0" onAction="#handleCadastrosVeiculoInserir" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #a0a6a8;" text="Inserir" />
+                  <JFXButton fx:id="buttonRemover" layoutX="402.0" layoutY="493.0" onAction="#handleButtonRemover" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #a0a6a8;" text="Remover" />
                   <Label layoutX="207.0" layoutY="57.0" text="Detalhes" textFill="#39464c">
                      <font>
                         <Font name="System Bold Italic" size="20.0" />
@@ -82,9 +82,9 @@
             </AnchorPane>
         </items>
       </SplitPane>
-      <Pane prefHeight="124.0" prefWidth="1017.0" style="-fx-background-color: #39464c;">
+      <Pane prefHeight="113.0" prefWidth="1017.0" style="-fx-background-color: #39464c;">
          <children>
-            <Label layoutX="406.0" layoutY="55.0" text="Cadastro de Veiculo" textFill="#d9d9d9">
+            <Label layoutX="406.0" layoutY="45.0" text="Cadastro de Veiculo" textFill="#d9d9d9">
                <font>
                   <Font name="System Bold Italic" size="20.0" />
                </font>

@@ -1,0 +1,163 @@
+CREATE TABLE funcionario (
+    codFunc SERIAL NOT NULL PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL,
+    dataNasc VARCHAR(15) NOT NULL,
+    cpf VARCHAR(15) NOT NULL
+);
+
+CREATE TABLE gerente (
+    codGerente SERIAL NOT NULL PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL,
+    dataNasc DATE NOT NULL,
+    cpf VARCHAR(15) NOT NULL,
+    usuario INTEGER NOT NULL,
+    senha INTEGER NOT NULL
+);
+
+CREATE TABLE cliente (
+    codCliente SERIAL NOT NULL PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL,
+    datanasc DATE NOT NULL,
+    cpf VARCHAR(15) NOT NULL,
+    cidade VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE veiculo (
+    codVeiculo SERIAL NOT NULL PRIMARY KEY,
+    modelo VARCHAR(50) NOT NULL,
+    ano VARCHAR(15) NOT NULL,
+    preco VARCHAR(20) NOT NULL,
+);
+
+CREATE TABLE peca (
+    codPeca SERIAL NOT NULL PRIMARY KEY,
+    nomePeca VARCHAR(50) NOT NULL,
+    descricaoPeca VARCHAR(50) NOT NULL,
+    numeroPeca CHAR(50) NOT NULL,
+    fabricantePeca VARCHAR(50) NOT NULL,
+    precoPeca NUMERIC(7,2) NOT NULL,
+    qtdPeca INTEGER NOT NULL
+);
+
+CREATE TABLE servico (
+    codServico SERIAL NOT NULL PRIMARY KEY,
+    tipoServico VARCHAR(50) NOT NULL,
+    proprietario VARCHAR(50) NOT NULL,
+    material VARCHAR(50) NOT NULL,
+    pecasUtilizadas VARCHAR(50) NOT NULL,
+    data DATE NOT NULL,
+    custos VARCHAR(50) NOT NULL,
+    veiculo VARCHAR (50) NOT NULL
+);
+
+
+
+CREATE TABLE fornecedor (
+    codForn SERIAL NOT NULL PRIMARY KEY,
+    empresa VARCHAR(50) NOT NULL,
+    local VARCHAR(50) NOT NULL,
+    cnpj VARCHAR(50) NOT NULL,
+    carros VARCHAR(50) NOT NULL
+);
+
+
+CREATE TABLE testDrive (
+  codTestDrive SERIAL PRIMARY KEY,
+  codCliente INTEGER REFERENCES Cliente(codCliente) NOT NULL,
+  codVeiculo INTEGER REFERENCES Veiculo(codVeiculo) NOT NULL,
+  data DATE NOT NULL,
+  duracao INT
+);
+
+CREATE TABLE venda (
+    codVenda SERIAL NOT NULL PRIMARY KEY,
+    clienteVenda INTEGER REFERENCES cliente(codCliente) NOT NULL,
+    veiculoVenda INTEGER REFERENCES veiculo(codVeiculo) NOT NULL,
+    funcVenda INTEGER REFERENCES funcionario(codFunc) NOT NULL,
+    valorVenda VARCHAR(30) NOT NULL,
+    dataVenda VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE consorcio (
+    idConsorcio SERIAL NOT NULL PRIMARY KEY,
+    clienteConsorcio INTEGER REFERENCES cliente(codCliente) NOT NULL,
+    veiculoConsorcio INTEGER REFERENCES veiculo(codVeiculo) NOT NULL,
+    valorCartaCredito VARCHAR(50) NOT NULL,
+    prazoPagamento DATE NOT NULL,
+    valorParcelas VARCHAR(50) NOT NULL,
+    taxasAdministrativas VARCHAR(50) NOT NULL
+); 
+
+CREATE TABLE Usuario (
+  cdUsuario SERIAL NOT NULL PRIMARY KEY,
+  email VARCHAR(100) NOT NULL,
+  nomeCompleto VARCHAR(100) NOT NULL,
+  nomeUsuario VARCHAR(50) NOT NULL,
+  senha VARCHAR(50) NOT NULL
+);  
+
+
+
+
+INSERT INTO funcionario (nome, dataNasc, cpf) VALUES
+('João Silva', '1980-05-15', '123.456.789-00'),
+('Maria Oliveira', '1992-08-25', '987.654.321-00'),
+('Carlos Souza', '1975-03-10', '456.789.123-00');
+
+
+INSERT INTO gerente (nome, dataNasc, cpf, usuario, senha) VALUES
+('Ana Ferreira', '1985-12-20', '321.654.987-00', 1001, 1234),
+('Bruno Santos', '1979-04-15', '789.123.456-00', 1002, 5678),
+('Fernanda Lima', '1990-11-30', '654.321.987-00', 1003, 9012);
+
+
+
+INSERT INTO cliente (nome, dataNasc, cpf, cidade) VALUES
+('Lucia Martins', '1988-07-22', '159.753.486-00', 'São Paulo'),
+('Marcelo Costa', '1995-01-18', '852.963.741-00', 'Rio de Janeiro'),
+('Patricia Mendes', '1972-09-14', '753.159.852-00', 'Belo Horizonte');
+
+
+INSERT INTO veiculo (modelo, ano, preco) VALUES
+('Ford Fiesta', '2022', 'R$ 50.000,00'),
+('Chevrolet Onix', '2023', 'R$ 55.000,00'),
+('Honda Civic', '2021', 'R$ 85.000,00');
+
+
+INSERT INTO peca (nomePeca, descricaoPeca, numeroPeca, fabricantePeca, precoPeca, qtdPeca) VALUES
+('Pneu', 'Pneu para carros de passeio', 'PN-001', 'Michelin', 300.00, 50),
+('Filtro de óleo', 'Filtro para motores a combustão', 'FO-002', 'Fram', 45.00, 100),
+('Velas de ignição', 'Velas para ignição de motores', 'VI-003', 'NGK', 20.00, 200);
+
+
+INSERT INTO servico (tipoServico, proprietario, material, pecasUtilizadas, data, custos, veiculo) VALUES
+('Troca de óleo', 'Roberto Faria', 'Óleo sintético', 'Filtro de óleo', '2024-06-10', 'R$ 150,00', 'Ford Fiesta'),
+('Revisão completa', 'Eduarda Silva', 'Diversos', 'Velas de ignição, Pneu', '2024-05-22', 'R$ 700,00', 'Honda Civic'),
+('Alinhamento', 'Thiago Lima', 'Ferramentas de alinhamento', 'N/A', '2024-06-05', 'R$ 200,00', 'Chevrolet Onix');
+
+
+INSERT INTO fornecedor (empresa, local, cnpj, carros) VALUES
+('Auto Peças Ltda', 'Curitiba', '12.345.678/0001-00', 'Ford, Chevrolet'),
+('Peças e Cia', 'Porto Alegre', '23.456.789/0001-00', 'Honda, Toyota'),
+('Distribuidora XYZ', 'São Paulo', '34.567.890/0001-00', 'Fiat, Renault');
+ 
+
+INSERT INTO testDrive (codCliente, codVeiculo, data, duracao) VALUES
+(1, 2, '2024-06-01', 30),
+(2, 1, '2024-06-03', 45),
+(3, 3, '2024-06-05', 60);
+
+
+INSERT INTO venda (clienteVenda, veiculoVenda, funcVenda, valorVenda, dataVenda) VALUES
+(1, 3, 1, 'R$ 85.000,00', '2024-06-08'),
+(2, 1, 2, 'R$ 50.000,00', '2024-06-10'),
+(3, 2, 3, 'R$ 55.000,00', '2024-06-12');
+
+
+INSERT INTO consorcio (clienteConsorcio, veiculoConsorcio, valorCartaCredito, prazoPagamento, valorParcelas, taxasAdministrativas) VALUES
+(1, 1, 'R$ 50.000,00', '2025-06-14', 'R$ 1.000,00', 'R$ 500,00'),
+(2, 2, 'R$ 55.000,00', '2025-06-14', 'R$ 1.100,00', 'R$ 550,00'),
+(3, 3, 'R$ 85.000,00', '2025-06-14', 'R$ 1.700,00', 'R$ 850,00');
+
+
+

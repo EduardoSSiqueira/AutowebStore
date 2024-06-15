@@ -23,17 +23,17 @@
             <RowConstraints maxHeight="92.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <JFXTextField fx:id="textFieldModeloCadastroVeiculo" focusColor="#cbb26a" promptText="Nome" text="Modelo" GridPane.columnIndex="1">
+            <JFXTextField fx:id="textFieldModeloCadastroVeiculo" focusColor="#a0a6a8" promptText="Modelo" text="Modelo" GridPane.columnIndex="1">
                <font>
                   <Font size="16.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="textFieldAnoCadastroVeiculo" focusColor="#cbb26a" prefHeight="37.0" prefWidth="594.0" promptText="Ano" text="Ano" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <JFXTextField fx:id="textFieldAnoCadastroVeiculo" focusColor="#a0a6a8" prefHeight="37.0" prefWidth="594.0" promptText="Ano" text="Ano" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="16.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="textFieldPreçoCadastroVeiculo" focusColor="#cbb26a" promptText="Preço" text="Preço" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <JFXTextField fx:id="textFieldPreçoCadastroVeiculo" focusColor="#a0a6a8" promptText="Preço" text="Preço" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font size="16.0" />
                </font>

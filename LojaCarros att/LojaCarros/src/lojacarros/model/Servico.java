@@ -1,20 +1,23 @@
 package lojacarros.model;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Servico// extends Veiculo 
 {
+    private int    codServico;
     private String tipoServico;
     private String proprietario;
     private String material;
     private String pecasUtilizadas;
-    private Date data;
-    private float custos;
-    private Veiculo veiculo;
+    private LocalDate data;
+    private String custos;
+    private String veiculo;
 
     // Construtor
-    public Servico(String tipoServico, String proprietario,String material, String pecasUtilizadas, Date data, float custos) {
+    public Servico(int codServico,String tipoServico, String proprietario,String material, String pecasUtilizadas, LocalDate data, String custos, String veiculo) {
         
+        this.codServico = codServico;
         this.tipoServico = tipoServico;
         this.proprietario = proprietario;
         this.material = material;
@@ -26,8 +29,15 @@ public class Servico// extends Veiculo
     public Servico(){
     
     }
-
     // Métodos getters e setters
+    
+    public int getCodServico() {
+        return codServico;
+    }
+
+    public void setCodServico(int codServico) {
+        this.codServico = codServico;
+    }
     public String getTipoServico() {
         return tipoServico;
     }
@@ -60,26 +70,29 @@ public class Servico// extends Veiculo
         this.pecasUtilizadas = pecasUtilizadas;
     }
 
-    public Date getData() {
+    public LocalDate getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(LocalDate data) {
         this.data = data;
     }
 
-    public float getCustos() {
+    public String getCustos(){
         return custos;
     }
+    
 
-    public void setCustos(float custos) {
+    public void setCustos(String custos) {
         this.custos = custos;
     }
-    public Veiculo getVeiculo() {
+    
+    public String getVeiculo() {
         return veiculo;
     }
 
-    public void setVeiculo(Veiculo veiculo) {
+    
+    public void setVeiculo(String veiculo) {
         this.veiculo = veiculo;
     }
     

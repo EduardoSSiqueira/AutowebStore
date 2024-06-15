@@ -1,11 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="lojacarros.controller.FXMLRelatorioTestDriveController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lojacarros.controller.FXMLRelatorioTestDriveController">
    <children>
-      <Label layoutX="261.0" layoutY="174.0" text="Relatorio Test Drive" />
+      <Pane layoutX="-10.0" prefHeight="132.0" prefWidth="1026.0" style="-fx-background-color: #39464c;">
+         <children>
+            <Label layoutX="421.0" layoutY="44.0" text="Relatório Test Drive" textFill="#d9d9d9">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TableView fx:id="tableViewTestDrive" layoutX="247.0" layoutY="159.0" prefHeight="342.0" prefWidth="505.0">
+        <columns>
+          <TableColumn fx:id="tableColumnCliente" prefWidth="247.0" text="Cliente" />
+          <TableColumn fx:id="tableColumnVeiculo" prefWidth="257.0" text="Veiculo" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="buttonImprimir" layoutX="436.0" layoutY="526.0" onAction="#handleImprimir" style="-fx-background-color: #a0a6a8;" text="Imprimir">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>
